@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="IMAGENES/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="sytels.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Servicios Técnicos y Telecomunicaciones</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+
+        }
+        *::after,
+        *::before,
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            position: absolute;
+            top: 0; 
+            left: 0;
+            background: linear-gradient(45deg, #00c6ff, #0072ff, #1e3c72, #2a5298);
+            background-size: cover;
+            width: 100%; 
+            height: 80px;
+            margin: 0px auto;
+        }
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+            font-size: lrem;
+        }
+        .navbar{
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            padding: 0px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .navbar .logo a, i{
+            padding-top: 30px;
+            color: #fff;
+            font-size: 1.5rem;
+            align-items: center;
+            font-family: "Poppins", sans-serif;
+        }
+        .navbar .links{
+            padding-top: 30px;
+            display: flex;
+            gap: 12rem;
+            font-size: larger;
+            font-family: "Poppins", sans-serif;
+        }
+        .links li {
+            position: relative; 
+            margin-right: 20px;
+        }
+        .links li a::before{
+            content: ''; 
+            position: absolute;
+            top: 100%;
+            width: 0; 
+            height: 2px; 
+            background: #fff;
+            transition-duration: 0.3s;
+        }
+        .links li a:hover::before{
+            width: 100%;
+        }
+        .servicios, .ventajas {
+            background: #f7f7f7;
+            padding: 60px 20px;
+            background-color: #f4f4f4;
+
+        }
+        .servicios h2, .Ventajas h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #0072ff;
+        }
+        .contact {
+            background: #333;
+            color: white;
+        }
+        #contact { 
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+
+        }
+        #contact h2 {
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .social-media a {
+            margin: 0 15px;
+            font-size: 40px; /* Tamaño de los íconos */
+            color: #fffcfc; /* Color inicial */
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #007bff; /* Color al pasar el mouse */
+        }
+        
+        .servicio-item, .Ventajas-item {
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .servicio-item:hover, .Ventajas-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .servicio-item h3, .Ventajas-item h3 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .servicio-item p, .Ventajas-item p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            align-items: center;
+        }
+        footer > p {
+            display: flex;           /* Activa Flexbox solo para este párrafo */
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center;     /* Centra verticalmente */
+            margin: 10px 0 0;        /* Espaciado superior opcional */
+        }
+        footer .social-media p {
+            margin-bottom: 10px; /* Espaciado entre los <p> dentro de la sección social-media */
+        }
+        .image-section {
+            background-image: url('https://media.licdn.com/dms/image/v2/D4E12AQF-r9nr7DWajg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1679678200802?e=2147483647&v=beta&t=WzRoqCq_WsT937TH0Y5U7UZTL9NrIw5UvWxLcEOG1mQ'); /* Imagen de fondo */
+            background-size: cover; /* La imagen cubre toda la sección */
+            background-position: center; /* Centra la imagen */
+            height: 500px; /* Altura de la sección */
+            display: flex; /* Flexbox para alinear contenido */
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            text-align: center;
+            color: white;
+            font-size: 4rem; /* Tamaño grande para el título principal */
+            margin: 60;
+        }
+
+        .image-section .content {
+            background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo para resaltar el texto */
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><i class="fa-solid fa-signal"></i><a href="#">IngeNovaTech</a></i></div>
+            <ul class="links">
+            <li><a href="#Ventajas">Sobre nosotros</a></li>
+            <li><a href="tienda.html">Servicios</a></li>
+            <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    
+    </header>
+    <section class="image-section">
+        <div class="content">
+            <p>IngeNovaTech<p>
+            <p>Todo lo que necesitas en servicios de software</p>
+        </div>
+    </section>
+    <section id="servicios" class="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="servicio-item">
+            <h3>Desarrollo web y móvil</h3>
+            <p>"¿Quieres llevar tu negocio al siguiente nivel? Creamos 
+                páginas web y aplicaciones móviles modernas, rápidas y atractivas que se adaptan a tus necesidades.
+                Desde plataformas de e-commerce hasta apps personalizadas, utilizamos las últimas tecnologías para garantizar el éxito de tu proyecto."</p>
+        </div>
+        <div class="servicio-item">
+            <h3>Soporte Técnico</h3>
+            <p>"Olvídate de los problemas tecnológicos. Nuestro equipo está listo para resolver cualquier inconveniente, 
+                desde configuraciones de redes hasta reparaciones de hardware y software. Con atención 24/7,  
+                aseguramos que tu negocio nunca se detenga."</p>
+        </div>
+        <div class="servicio-item">
+            <h3>Educación Tecnológica</h3>
+            <p>"Prepárate para el futuro con nuestros cursos especializados en programación, redes y telecomunicaciones. 
+                Aprende de expertos con certificación internacional y obtén habilidades prácticas que te destacarán en el mercado laboral."</p>
+        </div>
+    </section>
+    <section id="Ventajas" class="Ventajas">
+        <h2>¿Por qué elegirnos?</h2>
+        <div class="Ventajas-item">
+            <h3>Experiencia</h3>
+            <p>"Más de 10 años brindando soluciones innovadoras nos convierten en líderes en el sector tecnológico.    
+                Hemos trabajado con startups y empresas reconocidas a nivel global, adaptándonos siempre a los retos más exigentes."</p>
+        </div>
+        <div class="Ventajas-item">
+            <h3>Calidad</h3>
+            <p>"Nuestro compromiso es ofrecer resultados que superen tus expectativas. 
+                Utilizamos metodologías ágiles y herramientas de última generación para garantizar que cada proyecto sea un éxito."</p>
+        </div>
+        <div class="Ventajas-item">
+            <h3>Atención Personalizada</h3>
+            <p>"Nos dedicamos a entender tus necesidades específicas, ofreciendo soluciones hechas a medida. 
+                Desde la primera reunión hasta la entrega final, estarás acompañado por un equipo comprometido con tu satisfacción."</p>
+        </div>
+    </section>
+    <footer>
+        <section id="contact" class="contact">
+            <div class="social-media">
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <h2>Contáctanos</h2>
+                <p>"¿Listo para transformar tus ideas en realidad? Nuestro equipo está aquí para escucharte. 
+                    Escríbenos por correo, llámanos o visita nuestras redes sociales. 
+                    Te ofrecemos una respuesta rápida y soluciones adaptadas a tus necesidades. ¡Hagamos realidad tus proyectos!"</p>
+                <p>Email: info@IngeNovaTech.com</p>
+                <p>Teléfono: +593 958462151</p>
+                <p>Visitanos en nuestro local en la dirección 11 de Noviembre y Diego de Rodriguez</p>
+            </div>    
+        </section>
+        <p>&copy; 2025 IngeNovaTech. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

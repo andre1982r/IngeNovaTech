@@ -1,0 +1,347 @@
+*::after,
+*::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,html{
+  overflow-x: hidden;
+}
+header {
+    top: 0; 
+    left: 0;
+    right: 0;
+    background: linear-gradient(45deg, #00c6ff, #0072ff, #1e3c72, #2a5298);
+    background-size: cover;
+    width: 100%; 
+    height: auto;
+    margin: 0 auto;
+    position: relative; 
+    z-index: 1000;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+.navbar {
+  width: 100%;
+  height: 80px;
+  padding: 0 20px; 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+.navbar .logo a, i {
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+.navbar .links {
+  display: flex;
+  position: relative;
+  gap: 2rem;
+  font-size: larger;
+  font-family: "Poppins", sans-serif;
+}
+.links li {
+  position: relative; 
+  margin-right: 20px;
+}
+.links li a::before{
+  content: ''; 
+  position: absolute;
+  top: 100%;
+  width: 0; 
+  height: 2px; 
+  background: #fff;
+  transition-duration: 0.3s;
+}
+.links li a:hover::before{
+  width: 100%;
+}
+/* RESPONSIVE SECCION PARA PRIMERA SECCION */
+.menu-toggle {
+  display: none; 
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .navbar .links {
+      display: none; 
+      flex-direction: column;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      position: absolute;
+      top: 80px;
+      left: 0;
+      padding: 10px 0;
+      text-align: center;
+  }
+
+  .navbar .links.active {
+    height: 340px;
+    background: #f3f5f7; 
+    display: flex; 
+    border-bottom: 1px solid #ddd;
+  }
+
+  .navbar .links li {
+      margin: 10px 0;
+  }
+
+  .menu-toggle {
+      display: block; 
+  }
+  .navbar .links li a {
+    color: purple;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.7rem;
+}
+}
+/* Primera seccion */
+
+.section1{
+  height: 850px;
+  margin-left: 250px;
+  margin-right: 250px;
+  padding: 0 8px;
+  justify-content: flex-start;
+}
+
+.seccion1{
+  height: auto;
+  display: grid;
+}
+
+.seccion1 .encabezado{
+  padding-top: 50px;
+  justify-content: flex-start;
+  height: auto;
+  font-size: 15px;
+}
+.seccion1 > div:nth-child(1){
+  width: auto;
+  height: auto;
+  justify-content: flex-start;
+}
+.encabezado .titulo span{
+  font-family: "Poppins", sans-serif;
+  color:rgb(131, 217, 136);
+  margin-bottom: 50px;
+}
+.encabezado .titulo h1{
+  color: white;
+  margin-bottom: 25px;
+  font-family: "Poppins",sans-serif;
+  width: 75%;
+}
+.titulo p{
+  margin-bottom: 50px;
+  color: white;
+  font-family: "Poppins",sans-serif;
+  width: 75%;
+}
+
+.tabla{
+  height: 600px;
+  justify-content: flex-start;
+
+}
+.contenido{
+  padding: 0px 8px;
+  height: auto;
+}
+.contenido .encabezado1{
+  display: flex;
+  height: auto;
+  width: auto;
+  color: white;
+  font-family: "Poppins",sans-serif;
+  font-size: 15px;
+  justify-content: flex-start;
+}
+.encabezado1 .tab-active, .tab{
+ padding: 10px 10px;
+}
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #888;
+}
+.tab-active {
+  color: white;
+  border-bottom: 2px solid #00A2FF;
+}
+.contenido_tab {
+  display: none;
+}
+
+.contenido_tab.active {
+  display: block;
+}
+.tabla_contenido {
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+.tabla_contenido h2{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+  font-family: "Poppins",sans-serif;
+  font-size: large;
+}
+.tabla_contenido {
+  justify-content: flex-start;
+  padding: 10px 10px;
+  margin-top:  20px;
+  border: 0.5px solid white;
+  border-color: white;
+  border-radius: 8px;
+}
+.curso{
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  font-family: "Poppins",sans-serif;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.curso i{
+  color: rgb(131, 217, 136);
+  margin-right: 15px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin-left: 10;
+}
+.curso .header-curso .titulo{
+  color: white;
+  display: flex;
+  margin-bottom: 5px;
+}
+.header-curso p{
+  color: whitesmoke;
+}
+/* Seccion suscribete */
+
+.contaiiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  margin-top: 0px;
+  background-color: #13161c;
+}
+.contaiiner .titulo {
+  text-align: center;
+  align-items: center;
+  gap:0px;
+  margin-bottom: 40px;
+  color: rgb(131, 217, 136);
+}
+
+.plans {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: auto;
+  box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
+  gap: 10px;
+}
+
+.plan h3 {
+  font-size: 22px;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.student-count {
+  font-size: 14px;
+  color: #aaa;
+}
+
+
+.billing {
+  font-size: 14px;
+  color: #888;
+}
+
+.plan ul {
+  list-style: none;
+  padding: 0;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+}
+
+.plan ul li {
+  text-align: left;
+  padding: 5px 0;
+  font-family: "Poppins", sans-serif;
+  color: gray;
+  justify-content: center;
+}
+.plan .headerr h3{
+  align-items: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  height: auto;
+}
+.plan .headerr p{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+}
+
+.subscribe {
+  background-color: transparent;
+  border: 1px solid #0f0;
+  color: rgb(131, 217, 136);
+  padding: 10px;
+  width: 100%;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  align-items: center;
+}
+
+.subscribe:hover {
+  background-color: white;
+
+}
+
+.highlight {
+  border: 2px solid #0f0;
+  box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.7);
+}
+
+
+.note {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 20px;
+}

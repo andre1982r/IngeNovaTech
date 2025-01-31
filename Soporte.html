@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="IMAGENES/logo.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="sytels.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Soporte tecnico</title>     
+    <style>
+    
+
+    /* Estilo general de la sección */
+    body,html{
+  overflow-x: hidden;
+}
+header {
+    top: 0; 
+    left: 0;
+    right: 0;
+    background: linear-gradient(45deg, #00c6ff, #0072ff, #1e3c72, #2a5298);
+    background-size: cover;
+    width: 100%; 
+    height: auto;
+    margin: 0 auto;
+    position: relative; 
+    z-index: 1000;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+.navbar {
+  width: 100%;
+  height: 80px;
+  padding: 0 20px; 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+.navbar .logo a, i {
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+.navbar .links {
+  display: flex;
+  position: relative;
+  gap: 2rem;
+  font-size: larger;
+  font-family: "Poppins", sans-serif;
+}
+.links li {
+  position: relative; 
+  margin-right: 20px;
+}
+.links li a::before{
+  content: ''; 
+  position: absolute;
+  top: 100%;
+  width: 0; 
+  height: 2px; 
+  background: #fff;
+  transition-duration: 0.3s;
+}
+.links li a:hover::before{
+  width: 100%;
+}
+/* RESPONSIVE SECCION PARA PRIMERA SECCION */
+.menu-toggle {
+  display: none; 
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .navbar .links {
+      display: none; 
+      flex-direction: column;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      position: absolute;
+      top: 80px;
+      left: 0;
+      padding: 10px 0;
+      text-align: center;
+  }
+
+  .navbar .links.active {
+    height: 340px;
+    background: #f3f5f7; 
+    display: flex; 
+    border-bottom: 1px solid #ddd;
+  }
+
+  .navbar .links li {
+      margin: 10px 0;
+  }
+
+  .menu-toggle {
+      display: block; 
+  }
+  .navbar .links li a {
+    color: purple;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.7rem;
+}
+}
+    .servicios {
+        padding: 60px 20px;
+        background-color: #f4f4f4;
+    }
+
+    .servicios h2 {
+        margin: 30px;
+        font-size: 2.5rem;
+        color: #0072ff;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    /* Estilo de cada tarjeta de servicio */
+    .servicio-item {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 600px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Efecto al pasar el mouse sobre el servicio */
+    .servicio-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilo de los títulos dentro de cada servicio */
+    .servicio-item h3 {
+        font-size: 1.8rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    /* Estilo de los párrafos dentro de cada servicio */
+    .servicio-item p {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    /* Estilo de las imágenes dentro de cada servicio */
+    .servicio-item img {
+        width: 100%; /* La imagen ocupa el ancho completo del contenedor */
+        max-width: 500px; /* Máximo ancho para mantener proporciones */
+        height: auto;
+        border-radius: 10px;
+        margin-top: 15px; /* Espaciado entre el texto y la imagen */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra para más estilo */
+    }
+
+    /* Responsividad: Ajuste para celulares */
+    @media (max-width: 768px) {
+        .servicio-item {
+            max-width: 90%;
+        }
+    }
+    .servicio-item1 {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 600px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Efecto al pasar el mouse sobre el servicio */
+    .servicio-item1:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilo de los títulos dentro de cada servicio */
+    .servicio-item1 h3 {
+        font-size: 1.8rem;
+        color: #333;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    /* Estilo de los párrafos dentro de cada servicio */
+    .servicio-item1 p {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        text-align: center;
+
+    }
+    .servicio-item1 h4 {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        text-align: 0px;
+
+    }
+
+    /* Responsividad: Ajuste para celulares */
+    @media (max-width: 768px) {
+        .servicio-item1 {
+            max-width: 90%;
+        }
+    }
+        .whatsapp-button {
+        display: inline-block;
+        background-color: #25D366; /* Color de WhatsApp */
+        color: white;
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+
+    .whatsapp-button:hover {
+        background-color: #1EBE5D; /* Color más oscuro al pasar el mouse */
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-signal"></i>
+                <a href="#">IngeNovaTech</a>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tienda.html">Servicios</a></li>
+            <li><a href="footer">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <!-- Servicio: Soporte técnico -->
+        
+        <section id="servicios" class="servicios">
+            <h2>Servicios en Soporte Técnico</h2>
+            <div class="servicio-item">
+                <h3> Servicio Técnico en dispositivos móviles: Tu Teléfono Siempre en las Mejores Manos </h3>
+                <p>"📱Tu celular es más que un dispositivo, es tu herramienta de comunicación, trabajo y entretenimiento. ¿Problemas con la pantalla, la batería o la carga? No te preocupes, ¡tenemos la solución perfecta para ti!<br><br>
+
+                    <strong>✅ Cambio de pantalla sin perder calidad ni sensibilidad.</strong><br><br>
+                    <strong>✅ Baterías originales que recuperan la autonomía de tu celular.</strong><br><br>
+                    <strong>✅ Reparación de carga y conectividad para que nunca te quedes sin energía.</strong><br><br>
+                    <strong>✅ Desbloqueo de cuentas y recuperación de datos importantes.</strong><br><br>
+                    
+                    <strong>📍 Servicio rápido y garantizado.</strong><br><br>
+                    <strong>💰 Precios justos y sin sorpresas.</strong><br><br>
+                    <strong>🚀 Tu celular como nuevo en el menor tiempo posible.</strong><br><br>
+                    
+                    <strong>💬 ¡Contáctanos hoy y revive tu celular!"</strong>
+                    <img src="https://img.freepik.com/fotos-premium/reparacion-telefonos-celulares-centro-servicio-desmontaje-diagnostico-telefonos-inteligentes-vista-superior-lugar-trabajo-reparador_116547-11112.jpg" alt="Reparación de Dispositivos Moviles" class="servicio-img">
+                
+                </p>
+            </div>
+            <div class="servicio-item">
+                <h3>💻Soporte Técnico en computadores y laptops: Velocidad, Seguridad y Rendimiento Garantizados</h3>
+                <p>"¿Tu PC o laptop está lenta? ¿No enciende? ¿Problemas con virus o pantallas azules? No pierdas más tiempo, nuestros expertos te ayudarán a solucionar cualquier problema con rapidez y eficiencia.<br><br>
+
+                    🔧 <strong>Reparación y mantenimiento de hardware:</strong> Cambiamos discos duros, memorias RAM y solucionamos fallos en la tarjeta madre. <br>
+                    ⚙️ <strong>Optimización de software:</strong> Eliminamos virus, mejoramos la velocidad del sistema y recuperamos archivos perdidos. <br>
+                    ⚡ <strong>Actualización a discos SSD y aumento de RAM:</strong> Para que tu equipo vuelva a funcionar más rápido que nunca. <br>
+                    🔌 <strong>Problemas de conectividad y carga:</strong> Solucionamos puertos dañados, WiFi intermitente y fallos en la batería. <br><br>
+
+                    💡 <strong>Tecnología de punta, soluciones garantizadas.</strong> <br>
+                    🏆 <strong>Más de 10 años de experiencia resolviendo problemas como el tuyo.</strong> <br>
+                    ⏳ <strong>Servicio exprés para que no pierdas productividad.</strong> <br><br>
+
+                    📩 <strong>¡Cotiza tu reparación ahora y recupera la potencia de tu PC!</strong>
+                    <img src="https://previews.123rf.com/images/mvelishchuk/mvelishchuk2106/mvelishchuk210600158/169772270-tecnolog%C3%ADa-de-hardware-de-reparaci%C3%B3n-de-computadoras-servicio-t%C3%A9cnico-de-pc-electr%C3%B3nico-del.jpg" alt="Reparación de computadores y laptops" class="servicio-img">
+                </p>    
+            </div>
+            <div class="servicio-item">
+                <h3>🎮Soporte Técnico en consolas: No Dejes de Jugar, Nosotros lo Arreglamos<br><br></h3>
+                <p>"¿Tu PlayStation, Xbox o Nintendo Switch presenta fallos? Sabemos lo importante que es para ti seguir disfrutando de tus juegos favoritos, por eso ofrecemos reparaciones rápidas y efectivas.</strong><br><br>
+
+                    🎮 <strong>Problemas con el puerto HDMI o imagen sin señal?</strong> Lo reparamos para que vuelvas a jugar en HD.<br>
+                    🎮 <strong>¿Tu consola se apaga o se sobrecalienta?</strong> Realizamos mantenimiento completo y cambio de pasta térmica para evitar daños mayores.<br>
+                    🎮 <strong>¿Tus controles no responden bien?</strong> Reparación de joysticks, botones y gatillos para que vuelvas a tener precisión en cada partida.<br>
+                    🎮 <strong>Error en el sistema o problemas con el almacenamiento?</strong> Solucionamos fallos de software, instalamos discos de mayor capacidad y optimizamos tu consola.<br><br>
+                    
+                    📌 <strong>Reparaciones con garantía y piezas originales.</strong><br>
+                    ⚡ <strong>Servicio rápido para que no pierdas tu racha en el juego.</strong><br>
+                    🔧 <strong>Soluciones profesionales para todas las generaciones de consolas.</strong><br>
+                    
+                    🎯 <strong>¡No dejes que un problema técnico te saque del juego! Contáctanos hoy y revive tu consola."</strong>
+                    <img src="https://computadoresenbogota.com/market/wp-content/uploads/2020/06/playstation.jpg"alt="Reparación de computadores y laptops" class="servicio-img">
+                </p>
+            </div>
+            <div class="servicio-item1">
+                <h3>🤖Chat Especializado<br><br></h3>
+                <p>"💬 ¡Habla con nuestro Chatbot y Resuelve tus Dudas al Instante!<br>
+
+                    <strong>¿Tienes dudas sobre una reparación? ¿Quieres conocer precios o agendar una consulta con un técnico? 🔧💻📱</strong><br><br>
+                    
+                    <strong>Nuestro Chatbot Inteligente está disponible 24/7 para responder todas tus preguntas, ayudarte a encontrar la mejor solución para tu problema y conectarte con un técnico especializado si lo necesitas.</strong><br><br>
+                <p>
+                <h4>    
+                    ✅ Consulta precios y tiempos de reparación.<br>
+                    ✅ Pregunta sobre problemas en celulares, computadoras y consolas.<br>
+                    ✅ Obtén recomendaciones para el mejor mantenimiento de tus dispositivos.<br>
+                    ✅ Si necesitas asistencia personalizada, te pondremos en contacto con un técnico real.<br><br>
+                <h4>
+                <p>    
+                    💡 ¡Tu solución está a un solo mensaje de distancia! Escríbenos ahora y deja que nuestro Chatbot te ayude. 🚀🔧<br><br>
+                    
+                    📩 Chatea ahora y recibe asistencia al instante. 👇"<br><br>
+
+                <a href="https://wa.me/qr/CPBPJ2MRXIMJJ1" target="_blank" class="whatsapp-button">
+                    💬 Chatea con nuestro bot
+                </a>
+                </p>
+            </div>
+        </section>
+        <footer>
+            <section id="contact" class="contact">
+                <div class="social-media">
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <h2>Contáctanos</h2>
+                    <p>"¿Listo para transformar tus ideas en realidad? Nuestro equipo está aquí para escucharte. 
+                        Escríbenos por correo, llámanos o visita nuestras redes sociales. 
+                        Te ofrecemos una respuesta rápida y soluciones adaptadas a tus necesidades. ¡Hagamos realidad tus proyectos!"</p>
+                    <p>Email: info@IngeNovaTech.com</p>
+                    <p>Teléfono: +593 958462151</p>
+                    <p>Visitanos en nuestro local en la dirección 11 de Noviembre y Diego de Rodriguez</p>
+                </div>    
+            </section>
+            <p>&copy; 2025 IngeNovaTech. Todos los derechos reservados.</p>
+        </footer>
+        <script src="movil.js"></script>
+</body>
+</html>

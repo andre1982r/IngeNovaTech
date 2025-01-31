@@ -1,0 +1,237 @@
+*::after,
+*::before,
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+header {
+    position: fixed; /* Fija el encabezado */
+    top: 0; /* Posición en la parte superior */
+    left: 0;
+    background: linear-gradient(45deg, #00c6ff, #0072ff, #1e3c72, #2a5298);
+    background-size: cover;
+    width: 100%; 
+    height: 80px;
+    margin: 0px auto;
+    z-index: 1000;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: lrem;
+
+
+}
+.navbar{
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.navbar .logo a, i{
+    padding-top: 30px;
+    color: #fff;
+    font-size: 1.5rem;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+.navbar .links{
+    padding-top: 30px;
+    display: flex;
+    gap: 12rem;
+    font-size: larger;
+    font-family: "Poppins", sans-serif;
+}
+.links li {
+    position: relative; 
+    margin-right: 20px;
+}
+.links li a::before{
+    content: ''; 
+    position: absolute;
+    top: 100%;
+    width: 0; 
+    height: 2px; 
+    background: #fff;
+    transition-duration: 0.3s;
+}
+.links li a:hover::before{
+    width: 100%;
+}
+/* PARTE DE SERVICIOS */
+
+.container-items{
+    position: relative;
+    padding-top: 50px;
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.servicio-item{
+    padding: 5% 8%;
+}
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    color: black;
+    font-size: 4rem;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: transparent;
+    letter-spacing: 4px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff, #1e3c72, #2a5298);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 8px;
+}
+.secciones{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 80px;
+}
+.seccion {
+    height: 350px;
+    width: 450px;
+    background: white;
+    border-radius: 8px;
+    border: 0.2px solid rgb(0, 191, 255);
+    padding: 3% 8%;
+    transition: 0.6s;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: space-between; 
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    color: black;
+    transition: color 0.01s ease-in-out;
+    min-height: 350px; 
+}
+
+.seccion * {
+    transition: color 0.4ms ease-in-out; 
+}
+
+.seccion:hover i {
+    color: white; 
+}
+
+.seccion:hover h2 {
+    color: white;
+}
+
+.seccion:hover {
+    color: white; 
+}
+.seccion:hover .btn{
+    color: white; 
+}
+
+
+.seccion:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 0%; 
+    height: 100%;
+    background-color: rgb(0, 191, 255);
+    transition: width 0.4s ease-in-out; 
+    z-index: -1;
+}
+
+.seccion:hover:after {
+    width: 100%; 
+}
+
+.seccion i {
+    color: skyblue;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.seccion h2 {
+    color : black;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.seccion p {
+    text-align: left;
+    width: 100%;
+    padding: 2% 8%;
+    margin: 12px 0;
+    font-size: 17px;
+    flex-grow: 1; 
+}
+
+.seccion .btn {
+    color: skyblue;
+    margin: 10px; 
+    padding: 10px 20px; 
+    text-align: center;
+    align-self: center; 
+}
+.seccion .btn i {
+    margin-right: 8px; 
+    font-size: 1.2rem; 
+}
+/* footer seccion */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    align-items: center;
+}
+footer > p {
+    display: flex;           /* Activa Flexbox solo para este párrafo */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    margin: 10px 0 0;        /* Espaciado superior opcional */
+}
+footer .social-media p {
+    margin-bottom: 10px; /* Espaciado entre los <p> dentro de la sección social-media */
+}
+.image-section {
+    background-image: url('https://media.licdn.com/dms/image/v2/D4E12AQF-r9nr7DWajg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1679678200802?e=2147483647&v=beta&t=WzRoqCq_WsT937TH0Y5U7UZTL9NrIw5UvWxLcEOG1mQ'); /* Imagen de fondo */
+    background-size: cover; /* La imagen cubre toda la sección */
+    background-position: center; /* Centra la imagen */
+    height: 500px; /* Altura de la sección */
+    display: flex; /* Flexbox para alinear contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    text-align: center;
+    color: white;
+    font-size: 4rem; /* Tamaño grande para el título principal */
+    margin: 60;
+}
+
+.image-section .content {
+    background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo para resaltar el texto */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+
